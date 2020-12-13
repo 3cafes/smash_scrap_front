@@ -1,0 +1,17 @@
+.PlayerCard {
+	width: 356px;
+	height: 68px;
+	margin: 21px;
+	padding: 5px;
+	background-size: cover;
+	background-position: center;
+	border-style: solid;
+	border-width: 3px;
+	box-shadow: -10px 10px #0e0e0e;
+	transition: 0.1s;
+}
+
+.PlayerCard:hover {
+	box-shadow: -23px 23px #2a2a2a;
+	transform: translate(13px, -13px);
+}

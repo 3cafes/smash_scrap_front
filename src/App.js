@@ -1,6 +1,7 @@
 import './App.scss';
 import React, { useEffect, useState } from 'react';
 import { get_smash_player } from './api/scrap';
+import PlayerCard from './components/player_card';
 
 function App() {
 	const [players, setPlayers] = useState([]);
@@ -15,16 +16,13 @@ function App() {
 	}, []);
 
 	return (
-		<div className="App">
+		<div className="CardGrid">
 			{players.map((player) => (
-				<div
-					style={{
-						backgroundImage: `url("data:image/png;base64,${player.img_blob}"`,
-					}}
-				>
-					<p>{player.id}</p>
-					<p>{player.name}</p>
-				</div>
+				<PlayerCard
+					id={player.player_id}
+					name={player.name}
+					blob={player.img_blob}
+				></PlayerCard>
 			))}
 		</div>
 	);

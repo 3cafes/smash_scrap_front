@@ -1,1 +1,9 @@
 @import 'styles/colors.scss';
+
+.CardGrid {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, 397px);
+	grid-template-rows: 99px;
+	justify-content: center;
+}
