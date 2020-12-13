@@ -16,14 +16,20 @@ function App() {
 	}, []);
 
 	return (
-		<div className="CardGrid">
-			{players.map((player) => (
-				<PlayerCard
-					id={player.player_id}
-					name={player.name}
-					blob={player.img_blob}
-				></PlayerCard>
-			))}
+		<div className="App">
+			<h1>SMASH PLAYERS</h1>
+			{players.length <= 0 && <h2>no player found.</h2>}
+			{players.length > 0 && (
+				<div className="CardGrid">
+					{players.map((player) => (
+						<PlayerCard
+							id={player.player_id}
+							name={player.name}
+							blob={player.img_blob}
+						></PlayerCard>
+					))}
+				</div>
+			)}
 		</div>
 	);
 }
