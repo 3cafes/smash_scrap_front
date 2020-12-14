@@ -20,6 +20,9 @@ function App() {
 							<Link to="/items">
 								<h2>items</h2>
 							</Link>
+							<Link to="/stages">
+								<h2>stages</h2>
+							</Link>
 						</div>
 					</div>
 				</Route>
