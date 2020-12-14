@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Players from './pages/players';
 import Items from './pages/items';
+import Stages from './pages/stages';
 
 function App() {
 	return (
@@ -27,6 +28,9 @@ function App() {
 				</Route>
 				<Route exact path="/items">
 					<Items></Items>
+				</Route>
+				<Route exact path="/stages">
+					<Stages></Stages>
 				</Route>
 			</Switch>
 		</Router>

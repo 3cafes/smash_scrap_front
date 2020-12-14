@@ -20,3 +20,13 @@ export async function get_smash_items() {
 		return [];
 	}
 }
+
+export async function get_smash_stages() {
+	try {
+		const res = await axios.get(`${SERVER}/api/stage/all`);
+		return res.data;
+	} catch (e) {
+		console.log(e);
+		return [];
+	}
+}
